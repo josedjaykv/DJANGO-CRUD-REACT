@@ -13,4 +13,8 @@ export const createTask = (task) => {
     return taksApi.post('/', task)
 }
 
-export const deleteTask = (id) => taksApi.delete(`/${id}`)
+export const deleteTask = (id) => taksApi.delete(`/${id}/`)
+
+export const updateTask = (id, task) => taksApi.put(`/${id}/`, task)
+
+export const getTask = (id) => taksApi.get(`/${id}`)
